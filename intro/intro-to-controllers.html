@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Understanding Controllers</title>
+    <script src="lib/angularjs/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="mainApp" ng-controller="studentController">
+        Enter Firstname: <input type="text" ng-model="student.firstname"><br>
+        Enter Lastname: <input type="text" ng-model="student.lastname"><br>
+        <p>Your full name is <span ng-bind="student.fullname() | uppercase "></span></p>
+        
+    </div>
+
+    <script type="text/javascript">
+        var mainApp = angular.module("mainApp", []);
+        mainApp.controller("studentController", function($scope){
+            $scope.student = {
+                firstname: 'Jessica',
+                lastname: 'Fokoua',
+                fullname: function (){
+                    let studentObject = $scope.student;
+                    return studentObject.firstname + " " + studentObject.lastname; 
+                }
+            };
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+let mainApp = angular.module("mainApp", []);

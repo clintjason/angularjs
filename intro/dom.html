@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Document</title>
+    <script src="lib/angularjs/angular.min.js"></script>
+</head>
+<body>
+    <table ng-app="">
+        <tr>
+            <td><input type="checkbox" ng-model="disableInput">Choice</td><br>
+            <td><button ng-disabled="disableInput">Click</button></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" ng-model="showButton">Show or Hide Button</td><br>
+            <td><button ng-show="showButton">Button</button></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" ng-model="hideButton">Hide or Show Button</td><br>
+            <td><button ng-hide="hideButton">Button</button></td>
+        </tr>
+        <tr>
+            <td>Number of clicks: {{ onClickEvent }}</td><br>
+            <td><button ng-click="onClickEvent = onClickEvent + 1">Click here!</button></td>
+        </tr>
+    </table>
+</body>
+</html>
