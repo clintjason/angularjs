@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Includes Tuto Document</title>
+    <style>
+        table, th , td {
+           border: 1px solid grey;
+           border-collapse: collapse;
+           padding: 5px;
+        }
+        
+        table tr:nth-child(odd) {
+           background-color: #f2f2f2;
+        }
+        
+        table tr:nth-child(even) {
+           background-color: #ffffff;
+        }
+     </style>
+     <script src="../lib/angularjs/angular.min.js"></script>
+</head>
+<body>
+    <h2>AngularJS Sample Application</h2>
+      
+    <div ng-app = "mainApp" ng-controller="studentController">
+       <div ng-include = "'partials/main.htm'"></div>
+       <div ng-include = "'partials/subjects.htm'"></div>
+    </div>  
+</body>
+</html>
