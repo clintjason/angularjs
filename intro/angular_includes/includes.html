@@ -29,6 +29,8 @@
        <div ng-include = "'partials/main.html'"></div>
        <div ng-include = "'partials/subjects.html'"></div>
     </div>
+    <!-- This file should be run with a webserver. It could be apache server or http-server of
+     nodejs or etc. This is to avoid cross origin request errors -->
 
     <script>
         var mainApp = angular.module("mainApp", []);
